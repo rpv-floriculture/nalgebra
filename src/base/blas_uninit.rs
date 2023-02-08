@@ -277,7 +277,7 @@ pub unsafe fn gemm_uninit<
                         rsb as isize,
                         beta,
                         alpha,
-                        gemm::Parallelism::None,
+                        gemm::Parallelism::Rayon(0),
                     );
                     return;
                 }
